@@ -61,7 +61,7 @@ export const StateContextProvider = ({children}) => {
             alert('This place does not exist')
         }
     } 
-
+   
     // Fetch API for air quality
     const fetchAirQuality = async (lat, lng) => {
         const apiKey =  import.meta.env.VITE_AIR_QUALITY_API_KEY
@@ -139,7 +139,9 @@ export const StateContextProvider = ({children}) => {
         })    
         .catch(error => {
             console.error(`Error: ${error.response.status}`);
-            setPollen(null);
+            setPollen1(null);
+            setPollen2(null);
+            setPollen3(null);
         })
     }    
 
