@@ -4,7 +4,7 @@ import { useStateContext } from '../context'
 //importing images from folder
 
 import Clear from '../assets/images/Clear.jpg'
-import fog from '../assets/images/fog.png'
+import fog from '../assets/images/fog.jpg'
 import Cloudy from  '../assets/images/Cloudy.jpg'
 import Rainy from '../assets/images/Rainy.jpg'
 import snow from '../assets/images/snow.jpg'
