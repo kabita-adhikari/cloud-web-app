@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {useDate} from '../Utils/useDate'
+// import { useDateFromApi } from '../Utils/useDate.jsx'
 import sun from '../assets/icons/sun.png'
 import cloud from '../assets/icons/cloud.png'
 import fog from '../assets/icons/fog.png'
@@ -12,7 +13,7 @@ import '../index.css'
 const WeatherCard = ({
   temperature,
   windspeed,
-  humidity,
+  uvindex,
   place,
   heatIndex,
   iconString,
@@ -57,12 +58,12 @@ const WeatherCard = ({
         {place}
       </div>
       <div className='w-full flex justify-between items-center mt-4'>
-        <p className='flex-1 text-center p-2'>{new Date().toDateString()}</p>
-        <p className='flex-1 text-center p-2'>{time}</p>
+        <p className='flex-1 text-center p-1'>{new Date().toDateString()}</p>
+        <p className='flex-1 text-center p-1'>{time}</p>
       </div>
       <div className='w-full flex justify-between items-center mt-4 gap-4'>
-        <p className='flex-1 text-center p-2 font-bold bg-blue-600 shadow rounded-lg'>Wind Speed <p className='font-normal'>{windspeed} km/h</p></p>
-        <p className='flex-1 text-center p-2 font-bold rounded-lg bg-green-600'>Humidity <p className='font-normal'>{humidity} gm/m&#179;</p></p>
+        <p className='flex-1 text-center p-2 font-bold bg-blue-600 shadow rounded-lg'>Wind Speed <p className='font-normal'>{windspeed} mph</p></p>
+        <p className='flex-1 text-center p-2 font-bold rounded-lg bg-green-600'>UV INDEX <p className='font-normal'>{uvindex} </p></p>
       </div>
       <div className='w-full p-2 mt-4 flex justify-between items-center'>
         <p className='font-semibold text-lg'>Air Quality : </p>
